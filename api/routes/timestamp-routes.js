@@ -19,7 +19,7 @@ module.exports = (app) => {
     if (rx.test(unix)) {
       console.log("timestamp is a number");
       unix2 = Number(unix);
-      natural = moment(unix).format("MMMM D, YYYY");
+      natural = moment(Number(unix)).format("MMMM D, YYYY");
     } else if (!rx.test(unix)) {
       if (date == "Invalid date") {
         console.log("timestamp does not contain date or unix timestamp");
